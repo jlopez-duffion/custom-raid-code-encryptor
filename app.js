@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     const formElem = document.getElementById('raidForm');
     const submitBtn = document.getElementById('formSubmit');
-    const outputElem = document.querySelector('.decrypted-code-output');
+    const outputElem = document.querySelector('.encrypted-code-output');
 
     formElem.addEventListener("submit", function(event) {
     
@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         splitCode[splitKey[4] - 1],
         splitCode[splitKey[5] - 1],
                     ].join("");
+    
+    console.log(encrypted)
     
     outputElem.textContent = encrypted;
     
